@@ -1,4 +1,4 @@
-class mainController {
+class todoController {
 
     constructor(todoService) {
         this.todoService = todoService;

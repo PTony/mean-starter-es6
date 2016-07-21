@@ -1,0 +1,30 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			{{titre}}<input ng-model="titre">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+	
+			<table class="table">
+				<tr>
+					<th>Nom</th>
+					<th>Numéros</th>
+					<th>Actions</th>
+				</tr>
+				<tr ng-repeat="contact in vm.contacts">
+					<td>{{ contact.name }}</td>
+					<td>{{ contact.number }}</td>
+					<td><input ng-click="vm.delete(contact)" role="button" class="btn btn-danger" type="submit" name="delete" value="-"></td>
+				</tr>
+				<tr>
+					<td><input type="text" ng-model="vm.contact.name" placeholder="Name"></td>
+					<td><input type="text" ng-model="vm.contact.number" placeholder="XXXXXXXXXX"></td>
+					<td><input ng-click="vm.create(contact)" role="button" class="btn btn-success" type="submit" name="add" value="+"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+</div>
